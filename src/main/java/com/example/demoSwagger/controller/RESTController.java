@@ -36,16 +36,16 @@ public class RESTController {
 
 	
 	//Recoger errores
-	/*@ExceptionHandler(IllegalStateException.class)
+	@ExceptionHandler(IllegalStateException.class)
 	public String exceptionHandler() {
 		return "error";
-	}*/
+	}
 	
-	/*@ExceptionHandler(ConstraintViolationException.class)
+	@ExceptionHandler(ConstraintViolationException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	ResponseEntity<String> handleConstraintViolationException(ConstraintViolationException e) {
 		return new ResponseEntity<>("not valid due to validation error: " + e.getMessage(), HttpStatus.BAD_REQUEST);
-	}*/
+	}
 	
 	@Autowired
 	private DemoService demoService;
