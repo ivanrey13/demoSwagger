@@ -28,10 +28,10 @@ import io.swagger.annotations.ApiResponses;
 
 @RestController
 @Validated
-/*@Api(value= "Controlador de usuarios")
+@Api(value= "Controlador de usuarios")
 @ApiResponses(value = {
 		@ApiResponse(code=504, message = "Sistema cargando, espere un momento")
-})*/
+})
 public class RESTController {
 
 	
@@ -52,14 +52,14 @@ public class RESTController {
 	
 	@RequestMapping(method= RequestMethod.GET, value="/hello")
 	@ResponseBody
-	//@ApiOperation(value= "Retorno mensaje de prueba")
+	@ApiOperation(value= "Retorno mensaje de prueba")
 	public String mensaje() {
 		return demoService.muestraString();
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/users")
 	@ResponseBody
-	//@ApiOperation(value= "Retorno usuario")
+	@ApiOperation(value= "Retorno usuario")
 	public List<Usuario> getUser() {
 		return demoService.getUsuarios();
 	}
@@ -67,23 +67,23 @@ public class RESTController {
 	
 	@RequestMapping(method = RequestMethod.DELETE, value = "/users/{id}")
 	@ResponseBody
-	//@ApiOperation(value= "Retorno borrado de usuario")
+	@ApiOperation(value= "Retorno borrado de usuario")
 	public Usuario boorrarId(@PathVariable int id) {
 		return demoService.borrarCampo(id);
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, value = "/users")
 	@ResponseBody
-	//@ApiOperation(value= "Agregar usuario")
+	@ApiOperation(value= "Agregar usuario")
 	public Usuario agregarUsuario(@RequestBody Usuario usuario) {
 		return demoService.addUsuario(usuario);
 	}
 	
 	
-	/*@RequestMapping(method = RequestMethod.PUT, value = "/users")
+	@RequestMapping(method = RequestMethod.PUT, value = "/users")
 	@ResponseBody
 	@ApiOperation(value= "Modificar usuario")
 	public Usuario actualizarUsuario(@RequestBody Usuario usuario) {
 		return demoService.updateUsuario(usuario);
-	}*/
+	}
 }

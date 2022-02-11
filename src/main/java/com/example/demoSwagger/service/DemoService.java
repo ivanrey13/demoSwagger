@@ -35,7 +35,6 @@ public class DemoService {
 	}
 
 	public List<Usuario> getUsuarios() {
-		// TODO Auto-generated method stub
 		return usuarioRepository.findAll();
 	}
 	
@@ -52,9 +51,9 @@ public class DemoService {
 		return usuarioRepository.save(usuario);
 	}
 	
-	/*public Usuario updateUsuario(Usuario usuario) {
-		return usuarioRepository.updateUsuario(usuario);
-	}*/
+	public Usuario updateUsuario(Usuario usuario) {
+		return usuarioRepository.save(usuario);
+	}
 	
 	/*public void addUserAcount(Usuario usuario) {
 		Set<ConstraintViolation<Usuario>> violations = validator.validate(usuario);
