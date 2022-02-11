@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import io.swagger.annotations.ApiModel;
 import lombok.NonNull;
 
 
@@ -14,7 +15,7 @@ import lombok.NonNull;
 
 @Entity
 @Table(name="test")
-
+//@ApiModel(description = "Este es el modelo de Usuario")
 public class Usuario {
 
 	@Id

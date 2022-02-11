@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demoSwagger.exceptionhandler.RestResponseEntityExceptionHandler;
+//import com.example.demoSwagger.exceptionhandler.RestResponseEntityExceptionHandler;
 import com.example.demoSwagger.model.Usuario;
 import com.example.demoSwagger.repository.UsuarioRepository;
 
@@ -20,8 +20,8 @@ public class DemoService {
 	//@Value("${course.message}")
 	//private String hello;
 
-	@Autowired
-	RestResponseEntityExceptionHandler rreeh;
+	//@Autowired
+	//RestResponseEntityExceptionHandler rreeh;
 	
 	
 	@Autowired 
