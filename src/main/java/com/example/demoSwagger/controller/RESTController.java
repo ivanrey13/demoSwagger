@@ -35,11 +35,7 @@ import io.swagger.annotations.ApiResponses;
 public class RESTController {
 
 	
-	//Recoger errores
-	@ExceptionHandler(IllegalStateException.class)
-	public String exceptionHandler() {
-		return "error";
-	}
+	
 	
 	@ExceptionHandler(ConstraintViolationException.class)
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
